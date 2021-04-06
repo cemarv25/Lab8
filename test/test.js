@@ -44,3 +44,17 @@ describe('givenDecimal2WhenConvert', () => {
     assert.strictEqual(expectedResult, actualResult);
   });
 });
+
+describe('givenDecimal8WhenConvert', () => {
+  it('convert(8) = 10', () => {
+    // Given
+    var a = 8;
+    var expectedResult = 10;
+
+    // When
+    var actualResult = octalConverter.convert(a);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  });
+});
