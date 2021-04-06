@@ -58,3 +58,17 @@ describe('givenDecimal8WhenConvert', () => {
     assert.strictEqual(expectedResult, actualResult);
   });
 });
+
+describe('givenDecimal95WhenConvert', () => {
+  it('convert(95) = 137', () => {
+    // Given
+    var a = 95;
+    var expectedResult = 137;
+
+    // When
+    var actualResult = octalConverter.convert(a);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  });
+});
