@@ -30,3 +30,17 @@ describe('givenDecimal1WhenConvert', () => {
     assert.strictEqual(expectedResult, actualResult);
   });
 });
+
+describe('givenDecimal2WhenConvert', () => {
+  it('convert(2) = 2', () => {
+    // Given
+    var a = 2;
+    var expectedResult = 2;
+
+    // When
+    var actualResult = octalConverter.convert(a);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  });
+});
