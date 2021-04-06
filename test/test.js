@@ -1,5 +1,6 @@
 var assert = require('assert');
-var sum = require('../javascriptFunctions');
+var javascriptFunctions = require('../javascriptFunctions');
+var octalConverter = require('../OctalConverter');
 
 describe('givenTwoIntegersWhenSumThenSuccess', () => {
   it('sum(1, 2) = 3', () => {
@@ -9,7 +10,21 @@ describe('givenTwoIntegersWhenSumThenSuccess', () => {
     var expectedResult = 3;
 
     // When
-    var actualResult = sum(a, b);
+    var actualResult = javascriptFunctions.sum(a, b);
+
+    // Then
+    assert.strictEqual(expectedResult, actualResult);
+  });
+});
+
+describe('givenDecimal1WhenConvert', () => {
+  it('convert(1) = 1', () => {
+    // Given
+    var a = 1;
+    var expectedResult = 1;
+
+    // When
+    var actualResult = octalConverter.convert(a);
 
     // Then
     assert.strictEqual(expectedResult, actualResult);
